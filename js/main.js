@@ -1,6 +1,6 @@
 // sample data array
 
-var visualization = d3plus.viz()
+var visualization1 = d3plus.viz()
 	.container("#viz-1-1")
 	.data('./data/2015-11-01_RAI_country_data_formatted.csv') // data to use with the visualization
 	.type("geo_map") // visualization type
@@ -13,7 +13,7 @@ var visualization = d3plus.viz()
 	.time({ "value": "year", "solo": 1980 })
 	.draw() // finally, draw the visualization!
 
-var visualization = d3plus.viz()
+var visualization2 = d3plus.viz()
 	.container("#viz-1-2")
 	.data('./data/2015-11-01_RAI_country_data_formatted.csv') // data to use with the visualization
 	.type("line") // visualization type
@@ -21,9 +21,24 @@ var visualization = d3plus.viz()
 	.text("country_name") // key to use for display text
 	.x("year")
 	.y("n_selfrule") // key for coloring countries
+	.x({grid: false})
+	.y({grid: false})
 	.draw() // finally, draw the visualization!
 
-var visualization = d3plus.viz()
+var visualization3 = d3plus.viz()
+	.container("#viz-1-3")
+	.data('./data/2015-11-01_RAI_country_data_formatted.csv') // data to use with the visualization
+	.type("line") // visualization type
+	.id(["year", "country_name"]) // key for which our data is unique on
+	.text("country_name") // key to use for display text
+	.aggs({"n_selfrule": "mean"})
+	.x("year")
+	.y("n_selfrule") // key for coloring countries
+	.y({range: [5, 8.5], grid: false})
+	.x({grid: false})
+	.draw() // finally, draw the visualization!
+
+var visualization4 = d3plus.viz()
 	.container("#viz-2")
 	.data('./data/2015-11-01_RAI_country_data_formatted.csv') // data to use with the visualization
 	.type("geo_map") // visualization type
@@ -34,7 +49,7 @@ var visualization = d3plus.viz()
 	.tooltip("n_instdepth") // keys to place in tooltip
 	.draw() // finally, draw the visualization!
 
-var visualization = d3plus.viz()
+var visualization5 = d3plus.viz()
 	.container("#viz-3")
 	.data('./data/2015-11-01_RAI_country_data_formatted.csv') // data to use with the visualization
 	.type("geo_map") // visualization type

@@ -344,7 +344,7 @@ div.viz-section {
 }
 
 div.viz {
-  margin: 0 auto;
+  margin: 0px auto 30px auto;
   width: 1000px;
   height: 600px;
 }
