@@ -4,7 +4,7 @@ var visualization = d3plus.viz()
 	.container("#viz-1-1")
 	.data('./data/2015-11-01_RAI_country_data_formatted.csv') // data to use with the visualization
 	.type("geo_map") // visualization type
-	.coords("http://d3plus.org/topojson/countries.json") // pass topojson coordinates
+	.coords("https://d3plus.org/topojson/countries.json") // pass topojson coordinates
 	.id("formatted_continent_country_id") // key for which our data is unique on
 	.text("country_name") // key to use for display text
 	.color("n_selfrule") // key for coloring countries
@@ -27,7 +27,7 @@ var visualization = d3plus.viz()
 	.container("#viz-2")
 	.data('./data/2015-11-01_RAI_country_data_formatted.csv') // data to use with the visualization
 	.type("geo_map") // visualization type
-	.coords("http://d3plus.org/topojson/countries.json") // pass topojson coordinates
+	.coords("https://d3plus.org/topojson/countries.json") // pass topojson coordinates
 	.id("formatted_continent_country_id") // key for which our data is unique on
 	.text("country_name") // key to use for display text
 	.color("n_instdepth") // key for coloring countries
@@ -38,7 +38,7 @@ var visualization = d3plus.viz()
 	.container("#viz-3")
 	.data('./data/2015-11-01_RAI_country_data_formatted.csv') // data to use with the visualization
 	.type("geo_map") // visualization type
-	.coords("http://d3plus.org/topojson/countries.json") // pass topojson coordinates
+	.coords("https://d3plus.org/topojson/countries.json") // pass topojson coordinates
 	.id("formatted_continent_country_id") // key for which our data is unique on
 	.text("country_name") // key to use for display text
 	.color("n_sharedrule") // key for coloring countries
